@@ -219,7 +219,7 @@ Create a polygon from a set of points (example code). No segments or holes are s
 - `pa :: Array{Float64,2}`: each point can have a number of ``k>=0``real attributes (dimension n-by-k)
 """
 function polygon_struct_from_points(point :: Array{Float64,2},
-                                    pm :: Array{Int,1},
+                                    pm :: Array{Int,2},
                                     pa :: Array{Float64,2})
     
     # Create a Polygon_pslg struct as the input for TRIANGLE. The Polygon_pslg
@@ -229,7 +229,7 @@ function polygon_struct_from_points(point :: Array{Float64,2},
 
     # Choose the numbers. Everything that is zero does not need to be set.
     n_point = size(point,1)
-    n_point_marker = size(pm,2) # Set up one point marker
+    n_point_marker = 1 # Set up one point marker
     n_point_attribute = size(pa,2) # no special point attributes
     n_segment = 0
     n_hole = 0 # no holes
