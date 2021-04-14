@@ -6,13 +6,13 @@ if "%2" == "x86" goto x86
 
 :x64
 echo Setting x64
-set VS150COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\
+set VS150COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\
 call "%VS150COMNTOOLS%\..\..\VC\Auxiliary\Build\vcvarsall.bat" x86_amd64
 goto parsebuild
 
 :x86
 echo Setting x86
-set VS150COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\
+set VS150COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\
 call "%VS150COMNTOOLS%\..\..\VC\Auxiliary\Build\vcvarsall.bat"
 goto parsebuild
 
